@@ -15,6 +15,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">Test your music knowledge and discover new favorites.</p>
           </div>
 
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-56 xl:gap-80 mb-12 ">
           {/* Navigation */}
           <div>
             <h3 className="font-semibold text-foreground mb-4">Product</h3>
@@ -80,6 +81,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
         </div>
 
         {/* Divider */}

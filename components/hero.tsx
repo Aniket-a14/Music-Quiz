@@ -31,7 +31,7 @@ export default function Hero({ onStartQuiz }: HeroProps) {
         </AnimatedCard>
 
         <AnimatedCard delay={200}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             <TypingText 
               texts={[
                 "Welcome to Song Quiz!",
