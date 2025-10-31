@@ -15,7 +15,7 @@
     {
       "id": 2,
       "songName": "Shape of You",
-      "songUrl": "",
+      "songUrl": "/song2.mp3",
       "options": [
         "Ed Sheeran - Perfect",
         "Ed Sheeran - Shape of You",
@@ -27,6 +27,7 @@
     {
       "id": 3,
       "songName": "Levitating",
+      "songUrl": "/song2.mp3",
       "options": [
         "Dua Lipa - Levitating",
         "The Weeknd - Blinding Lights",
@@ -34,83 +35,6 @@
         "Billie Eilish - bad guy"
       ],
       "correct": "Dua Lipa - Levitating"
-    },
-    {
-      "id": 4,
-      "songName": "Bad Guy",
-      "options": [
-        "Billie Eilish - When We All Fall Asleep",
-        "Billie Eilish - bad guy",
-        "Post Malone - Circles",
-        "Mac Miller - Swimming"
-      ],
-      "correct": "Billie Eilish - bad guy"
-    },
-    {
-      "id": 5,
-      "songName": "drivers license",
-      "options": [
-        "Olivia Rodrigo - drivers license",
-        "Ariana Grande - thank u, next",
-        "Taylor Swift - Cardigan",
-        "Dua Lipa - New Rules"
-      ],
-      "correct": "Olivia Rodrigo - drivers license"
-    },
-    {
-      "id": 6,
-      "songName": "Uptown Funk",
-      "options": [
-        "Mark Ronson ft. Bruno Mars - Uptown Funk",
-        "Bruno Mars - Just the Way You Are",
-        "Mark Ronson - Late Night Feelings",
-        "David Guetta ft. Usher - Titanium"
-      ],
-      "correct": "Mark Ronson ft. Bruno Mars - Uptown Funk"
-    },
-    {
-      "id": 7,
-      "songName": "Bohemian Rhapsody",
-      "options": [
-        "The Beatles - Hey Jude",
-        "Queen - Bohemian Rhapsody",
-        "Pink Floyd - Comfortably Numb",
-        "David Bowie - Heroes"
-      ],
-      "correct": "Queen - Bohemian Rhapsody"
-    },
-    {
-      "id": 8,
-      "songName": "Strawberry Swing",
-      "options": [
-        "Coldplay - Yellow",
-        "Coldplay - Strawberry Swing",
-        "Radiohead - Paranoid Android",
-        "Oasis - Wonderwall"
-      ],
-      "correct": "Coldplay - Strawberry Swing"
-    },
-    {
-      "id": 9,
-      "songName": "One Dance",
-      "options": [
-        "Drake - One Dance",
-        "Drake - God's Plan",
-        "Post Malone - Congratulations",
-        "J. Cole - No Role Modelz"
-      ],
-      "correct": "Drake - One Dance"
-    },
-    {
-      "id": 10,
-      "songName": "Billie Jean",
-      "options": [
-        "Michael Jackson - Thriller",
-        "Michael Jackson - Billie Jean",
-        "Prince - Kiss",
-        "Janet Jackson - Control"
-      ],
-      "correct": "Michael Jackson - Billie Jean"
     }
   ]
 }

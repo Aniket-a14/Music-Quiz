@@ -34,8 +34,8 @@ export default function Hero({ onStartQuiz }: HeroProps) {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             <TypingText 
               texts={[
-                "Welcome to Song Quiz",
-                "Guess the Song!",
+                "Welcome to Song Quiz!",
+                "Guess the Song",
                 "Enjoy your time"
               ]} 
               speed={80}
@@ -73,19 +73,19 @@ export default function Hero({ onStartQuiz }: HeroProps) {
           <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto">
             <div className="p-4 bg-card/50 backdrop-blur rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 transform hover:scale-105 group">
               <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
-                500+
+                50+
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">Songs Available</div>
             </div>
             <div className="p-4 bg-card/50 backdrop-blur rounded-lg border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 transform hover:scale-105 group">
               <div className="text-2xl sm:text-3xl font-bold text-accent group-hover:scale-110 transition-transform duration-300">
-                1000+
+                10+
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">Players</div>
             </div>
             <div className="p-4 bg-card/50 backdrop-blur rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 transform hover:scale-105 group">
               <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
-                10
+                25
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">Questions</div>
             </div>
