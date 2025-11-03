@@ -45,85 +45,52 @@ export default function Quiz({ onExit }: QuizProps) {
 
   const question = shuffledQuestions[currentQuestion]
   const progress = ((currentQuestion + 1) / shuffledQuestions.length) * 100  
-  
-    const handlePlayback = () => {
-    if (!question.songUrl) {
-      console.warn("No song URL available yet")
-      return
-    }
+  const totalAnswered = currentQuestion > 0 ? currentQuestion : 1; // Avoid division by zero
+  const accuracy = Math.round((score / totalAnswered) * 100);
 
-    if (showResult) {
-      return; 
+    const handlePlayback = () => {
+    if (!question.trimmedSongUrl || !question.fullSongUrl) {
+      console.warn("No song URLs available yet");
+      return;
     }
 
     if (!isPlaying) {
-      // Set up audio source
-      audio.src = question.songUrl
-      
-      // Wait for metadata to load before playing
+      // Set up audio source based on mode
+      audio.src = isPreviewMode ? question.trimmedSongUrl : question.fullSongUrl;
+
       const playAudio = () => {
-        if (isPreviewMode) {
-          // Play from start for preview
-          audio.currentTime = 0;
-          
-          audio.play().catch(error => {
-            console.error("Error playing audio:", error)
-            setIsPlaying(false)
-          })
-          setIsPlaying(true)
+        audio.currentTime = 0;
+        audio.play().catch((error) => {
+          console.error("Error playing audio:", error);
+          setIsPlaying(false);
+        });
+        setIsPlaying(true);
+      };
 
-          setTimeout(() => {
-            audio.pause()
-            setIsPlaying(false)
-            setIsPreviewMode(false)
-          }, previewDuration)
-        } else if (showResult) {
-          // If showing result, let playFromRandomPosition handle it
-          playFromRandomPosition();
-        } else {
-          // Normal play from start
-          audio.currentTime = 0;
-          audio.play().catch(error => {
-            console.error("Error playing audio:", error)
-            setIsPlaying(false)
-          })
-          setIsPlaying(true)
-        }
-      }
-
-      // If metadata is already loaded
       if (audio.readyState >= 2) {
         playAudio();
       } else {
-        // Wait for metadata to load
-        audio.addEventListener('loadedmetadata', playAudio, { once: true });
+        audio.addEventListener("loadedmetadata", playAudio, { once: true });
       }
     } else {
-      audio.pause()
-      setIsPlaying(false)
+      audio.pause();
+      setIsPlaying(false);
     }
   }
 
-  const playFromRandomPosition = () => {
-    if (!question.songUrl) return;
-    
+  const playFromStart = () => {
+    if (!question.fullSongUrl) return;
+
     // Set up audio source
-    audio.src = question.songUrl;
-    
-    // Wait for metadata to load
-    audio.addEventListener('loadedmetadata', () => {
-      // Calculate random position between 30% and 70% of the song
-      const minPosition = audio.duration * 0.3;
-      const maxPosition = audio.duration * 0.7;
-      const randomPosition = Math.random() * (maxPosition - minPosition) + minPosition;
-      
-      audio.currentTime = randomPosition;
-      audio.play().catch(error => {
-        console.error("Error playing audio:", error);
-        setIsPlaying(false);
-      });
-      setIsPlaying(true);
-    }, { once: true });
+    audio.src = question.fullSongUrl;
+
+    // Play from the beginning
+    audio.currentTime = 0;
+    audio.play().catch(error => {
+      console.error("Error playing audio:", error);
+      setIsPlaying(false);
+    });
+    setIsPlaying(true);
   };
 
   const handleAnswer = (index: number) => {
@@ -134,30 +101,31 @@ export default function Quiz({ onExit }: QuizProps) {
     if (question.options[index] === question.correct) {
       setScore(score + 1);
     }
-    // Automatically play from random position after answer is selected
-    playFromRandomPosition();
+    // Automatically play the full song from the start after answer is selected
+    playFromStart();
   }
 
   const handleNext = () => {
-    if (currentQuestion < shuffledQuestions.length - 1) {
-      // Clean up current audio
-      audio.removeEventListener('loadedmetadata', () => {});
-      audio.pause();
-      audio.src = "";
-      setIsPlaying(false);
+    // Stop the current audio playback
+    audio.pause();
+    audio.src = "";
+    setIsPlaying(false);
 
-      // Move to next question
+    if (currentQuestion < shuffledQuestions.length - 1) {
+      // Move to the next question
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setShowResult(false);
       setIsPreviewMode(true);
+    } else {
+      // Handle quiz completion logic
+      console.log("Quiz completed");
     }
   }
 
   useEffect(() => {
     const cleanupAudio = () => {
-      // Remove any pending event listeners
-      audio.removeEventListener('loadedmetadata', () => {});
+      // Ensure cleanup only happens when the component unmounts
       audio.pause();
       audio.src = "";
     };
@@ -166,7 +134,6 @@ export default function Quiz({ onExit }: QuizProps) {
   }, [])
 
   const handlePlayAgain = () => {
-    // Reshuffle questions for a new game
     setShuffledQuestions([...quizData.questions].sort(() => Math.random() - 0.5))
     setCurrentQuestion(0)
     setScore(0)
@@ -218,7 +185,6 @@ export default function Quiz({ onExit }: QuizProps) {
   return (
     <div className="min-h-screen w-full pt-20 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
             <p className="text-sm text-muted-foreground mb-2">
@@ -236,7 +202,6 @@ export default function Quiz({ onExit }: QuizProps) {
           </button>
         </div>
 
-        {/* Score Display */}
         <div className="mb-12 p-6 bg-card border border-border/50 rounded-2xl flex justify-between items-center">
           <div>
             <p className="text-sm text-muted-foreground">Current Score</p>
@@ -247,18 +212,17 @@ export default function Quiz({ onExit }: QuizProps) {
           <div className="text-right">
             <p className="text-sm text-muted-foreground">Accuracy</p>
             <p className="text-3xl sm:text-4xl font-bold text-accent">
-              {currentQuestion > 0 ? Math.round((score / currentQuestion) * 100) : 0}%
+              {accuracy}%
             </p>
           </div>
         </div>
 
-        {/* Audio Player */}
         <div className="mb-12 p-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 rounded-2xl text-center">
           <button
             onClick={handlePlayback}
-            disabled={!question.songUrl}
+            disabled={!question.trimmedSongUrl && !question.fullSongUrl}
             className={`mx-auto mb-6 w-20 h-20 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg hover:shadow-primary/50 ${
-              !question.songUrl
+              !question.trimmedSongUrl && !question.fullSongUrl
                 ? "bg-muted cursor-not-allowed opacity-50"
                 : isPlaying 
                   ? "bg-accent text-accent-foreground hover:bg-accent/90" 
@@ -272,7 +236,7 @@ export default function Quiz({ onExit }: QuizProps) {
             )}
           </button>
           <p className="text-sm text-muted-foreground mb-2">
-            {!question.songUrl
+            {!question.trimmedSongUrl && !question.fullSongUrl
               ? "Song not available yet"
               : isPreviewMode 
                 ? "Preview Mode" 
@@ -281,7 +245,7 @@ export default function Quiz({ onExit }: QuizProps) {
                   : "Select an answer to continue"}
           </p>
           <p className="text-xl sm:text-2xl font-bold text-foreground">
-            {!question.songUrl
+            {!question.trimmedSongUrl && !question.fullSongUrl
               ? "Coming soon..."
               : isPlaying 
                 ? `🎵 ${isPreviewMode ? "Mystery Song" : question.correct} (${isPreviewMode ? "Preview" : "Playing"}...)`
@@ -293,13 +257,11 @@ export default function Quiz({ onExit }: QuizProps) {
           </p>
         </div>
 
-        {/* Question */}
         <div className="mb-8">
           <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">What's the name of this song?</h3>
           <p className="text-muted-foreground">Select the correct answer from the options below</p>
         </div>
 
-        {/* Answer Options */}
         <div className="space-y-4 mb-12">
           {question.options.map((option, index) => {
             const isCorrect = option === question.correct
@@ -331,7 +293,6 @@ export default function Quiz({ onExit }: QuizProps) {
           })}
         </div>
 
-        {/* Result Message */}
         {showResult && (
           <div
             className={`mb-12 p-6 rounded-xl border ${
@@ -354,7 +315,6 @@ export default function Quiz({ onExit }: QuizProps) {
           </div>
         )}
 
-        {/* Navigation */}
         {showResult && (
           <div className="flex justify-center">
             <button

@@ -2,39 +2,133 @@
   "questions": [
     {
       "id": 1,
-      "songName": "Blinding Lights",
-      "songUrl": "/song2.mp3",
+      "songName": "Aaj Phir",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Aaj Phir - Hate Story 2 128 Kbps-[AudioTrimmer.com].mp3",
+      "fullSongUrl": "/bgm and songs/Full song Aaj Phir - Hate Story 2 128 Kbps-.mp3",
       "options": [
-        "The Weeknd - Blinding Lights",
-        "Drake - One Dance",
-        "Post Malone - Rockstar",
-        "The Weeknd - Starboy"
+        "Jeene Laga Hoon - Ramaiya Vastavaiya",
+        "Tum Hi Ho - Aashiqui 2",
+        "Aaj Phir - Hate Story 2",
+        "Sun Saathiya - ABCD 2"
       ],
-      "correct": "The Weeknd - Blinding Lights"
+      "correct": "Aaj Phir - Hate Story 2"
     },
     {
       "id": 2,
-      "songName": "Shape of You",
-      "songUrl": "/song2.mp3",
+      "songName": "Baaton Ko Teri",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Baaton Ko Teri All Is Well 128 Kbps-[AudioTrimmer.com].mp3",
+      "fullSongUrl": "/bgm and songs/Full song Baaton Ko Teri All Is Well 128 Kbps-[AudioTrimmer.com].mp3",
       "options": [
-        "Ed Sheeran - Perfect",
-        "Ed Sheeran - Shape of You",
-        "Shawn Mendes - Treat You Better",
-        "Charlie Puth - Attention"
+        "Galliyan - Ek Villain",
+        "Raabta - Agent Vinod",
+        "Baaton Ko Teri - All Is Well",
+        "Channa Mereya - Ae Dil Hai Mushkil"
       ],
-      "correct": "Ed Sheeran - Shape of You"
+      "correct": "Baaton Ko Teri - All Is Well"
     },
     {
       "id": 3,
-      "songName": "Levitating",
-      "songUrl": "/song2.mp3",
+      "songName": "Chandigarh Waliye",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Chandigarh Waliye.mp3",
+      "fullSongUrl": "/bgm and songs/Full song Chandigarh Waliye.mp3",
       "options": [
-        "Dua Lipa - Levitating",
-        "The Weeknd - Blinding Lights",
-        "Ariana Grande - Positions",
-        "Billie Eilish - bad guy"
+        "Patiala Peg - Diljit Dosanjh",
+        "High Rated Gabru - Guru Randhawa",
+        "Chandigarh Waliye",
+        "Lahore - Guru Randhawa"
       ],
-      "correct": "Dua Lipa - Levitating"
+      "correct": "Chandigarh Waliye"
+    },
+    {
+      "id": 4,
+      "songName": "Har Kisi Ko",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Har Kisi Ko (Boss) - (Raag.Fm)-[AudioTrimmer.com].mp3",
+      "fullSongUrl": "/bgm and songs/Full song Har Kisi Ko (Boss) - (Raag.Fm)-[AudioTrimmer.com].mp3",
+      "options": [
+        "Khuda Bhi - Ek Paheli Leela",
+        "London - Money Aujla",
+        "Soch - Hardy Sandhu",
+        "Har Kisi Ko - Boss"
+      ],
+      "correct": "Har Kisi Ko - Boss"
+    },
+    {
+      "id": 5,
+      "songName": "Khuda Bhi",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Khuda Bhi Ek Paheli Leela.mp3",
+      "fullSongUrl": "/bgm and songs/Full song Khuda Bhi Ek Paheli Leela 320 Kbps-[AudioTrimmer.com].mp3",
+      "options": [
+        "Made In India - Alisha Chinai",
+        "Khuda Bhi - Ek Paheli Leela",
+        "Aaj Phir - Hate Story 2",
+        "Zara Zara - Rehnaa Hai Terre Dil Mein"
+      ],
+      "correct": "Khuda Bhi - Ek Paheli Leela"
+    },
+    {
+      "id": 6,
+      "songName": "London",
+      "trimmedSongUrl": "/bgm and songs/Trimmed London - Money Aujla.mp3",
+      "fullSongUrl": "/bgm and songs/Full song London - Money Aujla.mp3",
+      "options": [
+        "Chandigarh Waliye",
+        "London - Money Aujla",
+        "Sari Sari Raat - Khiladi 786",
+        "Soch - Hardy Sandhu"
+      ],
+      "correct": "London - Money Aujla"
+    },
+    {
+      "id": 7,
+      "songName": "Made In India",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Made In India by Alisha Chinai.mp3",
+      "fullSongUrl": "/bgm and songs/Full song Made In India by Alisha Chinai.mp3",
+      "options": [
+        "Khuda Bhi - Ek Paheli Leela",
+        "Made In India - Alisha Chinai",
+        "Har Kisi Ko - Boss",
+        "Zara Zara - Rehnaa Hai Terre Dil Mein"
+      ],
+      "correct": "Made In India - Alisha Chinai"
+    },
+    {
+      "id": 8,
+      "songName": "Sari Sari Raat",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Sari Sari Raat Khiladi 786 320 Kbps-[AudioTrimmer.com].mp3",
+      "fullSongUrl": "/bgm and songs/Full song Sari Sari Raat Khiladi 786 320 Kbps-[AudioTrimmer.com].mp3",
+      "options": [
+        "London - Money Aujla",
+        "Sari Sari Raat - Khiladi 786",
+        "Chandigarh Waliye",
+        "Soch - Hardy Sandhu"
+      ],
+      "correct": "Sari Sari Raat - Khiladi 786"
+    },
+    {
+      "id": 9,
+      "songName": "Soch",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Soch by hardy sandhu.mp3",
+      "fullSongUrl": "/bgm and songs/Full song Soch by hardy sandhu.mp3",
+      "options": [
+        "London - Money Aujla",
+        "Soch - Hardy Sandhu",
+        "Sari Sari Raat - Khiladi 786",
+        "Chandigarh Waliye"
+      ],
+      "correct": "Soch - Hardy Sandhu"
+    },
+    {
+      "id": 10,
+      "songName": "Zara Zara",
+      "trimmedSongUrl": "/bgm and songs/Trimmed Zara Zara.mp3",
+      "fullSongUrl": "/bgm and songs/Full song Zara Zara.mp3",
+      "options": [
+        "Made In India - Alisha Chinai",
+        "Zara Zara - Rehnaa Hai Terre Dil Mein",
+        "Khuda Bhi - Ek Paheli Leela",
+        "Har Kisi Ko - Boss"
+      ],
+      "correct": "Zara Zara - Rehnaa Hai Terre Dil Mein"
     }
   ]
 }
