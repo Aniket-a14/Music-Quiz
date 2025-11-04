@@ -129,6 +129,84 @@
         "Har Kisi Ko - Boss"
       ],
       "correct": "Zara Zara - Rehnaa Hai Terre Dil Mein"
+    },
+    {
+      "id": 11,
+      "songName": "3 Peg",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed 3 Peg.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song 3 Peg.mp3",
+      "options": [
+        "Amplifier",
+        "Bewafa",
+        "3 Peg",
+        "High Heels"
+      ],
+      "correct": "3 Peg"
+    },
+    {
+      "id": 12,
+      "songName": "Amplifier",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Amplifier.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full Song Amplifier.mp3",
+      "options": [
+        "Amplifier",
+        "Bewafa",
+        "3 Peg",
+        "High Heels"
+      ],
+      "correct": "Amplifier"
+    },
+    {
+      "id": 13,
+      "songName": "Bewafa",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Bewafa.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Bewafa.mp3",
+      "options": [
+        "Amplifier",
+        "Bewafa",
+        "3 Peg",
+        "High Heels"
+      ],
+      "correct": "Bewafa"
+    },
+    {
+      "id": 14,
+      "songName": "Bheegi Bheegi Raaton Mein",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Bheegi Bheegi Raaton Mein.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Bheegi Bheegi Raaton Mein.mp3",
+      "options": [
+        "Bheegi Bheegi Raaton Mein",
+        "Chura Liya Hai Tumne Jo Dil Ko",
+        "Didi Tera Devar Deewana",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Bheegi Bheegi Raaton Mein"
+    },
+    {
+      "id": 15,
+      "songName": "Chura Liya Hai Tumne Jo Dil Ko",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Chura Liya Hai Tumne Jo Dil Ko.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Chura Liya Hai Tumne Jo Dil Ko.mp3",
+      "options": [
+        "Bheegi Bheegi Raaton Mein",
+        "Chura Liya Hai Tumne Jo Dil Ko",
+        "Didi Tera Devar Deewana",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Chura Liya Hai Tumne Jo Dil Ko"
+    },
+    {
+      "id": 16,
+      "songName": "Didi Tera Devar Deewana",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Didi Tera Devar Deewana.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Didi Tera Devar Deewana.mp3",
+      "options": [
+        "Bheegi Bheegi Raaton Mein",
+        "Chura Liya Hai Tumne Jo Dil Ko",
+        "Didi Tera Devar Deewana",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Didi Tera Devar Deewana"
     }
   ]
 }
