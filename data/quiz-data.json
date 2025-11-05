@@ -207,6 +207,123 @@
         "Kal Ho Naa Ho"
       ],
       "correct": "Didi Tera Devar Deewana"
+    },
+    {
+      "id": 17,
+      "songName": "High Heels",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed High Heels.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song High Heels.mp3",
+      "options": [
+        "High Heels",
+        "Ishq Wala Love",
+        "Jalebi Bai",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "High Heels"
+    },
+    {
+      "id": 18,
+      "songName": "Ishq Wala Love",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Ishq Wala Love.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Ishq Wala Love.mp3",
+      "options": [
+        "High Heels",
+        "Ishq Wala Love",
+        "Jalebi Bai",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Ishq Wala Love"
+    },
+    {
+      "id": 19,
+      "songName": "Jalebi Bai",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Jalebi Bai.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full Song Jalebi Bai.mp3",
+      "options": [
+        "High Heels",
+        "Ishq Wala Love",
+        "Jalebi Bai",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Jalebi Bai"
+    },
+    {
+      "id": 20,
+      "songName": "Kal Ho Naa Ho",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Kal Ho Naa Ho.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Kal Ho Naa Ho.mp3",
+      "options": [
+        "High Heels",
+        "Ishq Wala Love",
+        "Jalebi Bai",
+        "Kal Ho Naa Ho"
+      ],
+      "correct": "Kal Ho Naa Ho"
+    },
+    {
+      "id": 21,
+      "songName": "Mehbooba Mehbooba",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Mehbooba Mehbooba.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Mehbooba Mehbooba.mp3",
+      "options": [
+        "Mehbooba Mehbooba",
+        "Mere Samnewali Khidki Mein",
+        "Oh Ho Ho Ho",
+        "Patiala Peg"
+      ],
+      "correct": "Mehbooba Mehbooba"
+    },
+    {
+      "id": 22,
+      "songName": "Mere Samnewali Khidki Mein",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Mere Samnewali Khidki Mein.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Mere Samnewali Khidki Mein.mp3",
+      "options": [
+        "Mehbooba Mehbooba",
+        "Mere Samnewali Khidki Mein",
+        "Oh Ho Ho Ho",
+        "Patiala Peg"
+      ],
+      "correct": "Mere Samnewali Khidki Mein"
+    },
+    {
+      "id": 23,
+      "songName": "Oh Ho Ho Ho",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Oh Ho Ho Ho.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Oh Ho Ho Ho.mp3",
+      "options": [
+        "Mehbooba Mehbooba",
+        "Mere Samnewali Khidki Mein",
+        "Oh Ho Ho Ho",
+        "Patiala Peg"
+      ],
+      "correct": "Oh Ho Ho Ho"
+    },
+    {
+      "id": 24,
+      "songName": "Patiala Peg",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Patiala Peg.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full Song Patiala Peg.mp3",
+      "options": [
+        "Mehbooba Mehbooba",
+        "Mere Samnewali Khidki Mein",
+        "Oh Ho Ho Ho",
+        "Patiala Peg"
+      ],
+      "correct": "Patiala Peg"
+    },
+    {
+      "id": 25,
+      "songName": "Sunny Sunny",
+      "trimmedSongUrl": "/bgm and songs 2/Trimmed Sunny Sunny Yaariyan.mp3",
+      "fullSongUrl": "/bgm and songs 2/Full song Sunny Sunny Yaariyan.mp3",
+      "options": [
+        "Mehbooba Mehbooba",
+        "Mere Samnewali Khidki Mein",
+        "Oh Ho Ho Ho",
+        "Sunny Sunny"
+      ],
+      "correct": "Sunny Sunny"
     }
   ]
 }
